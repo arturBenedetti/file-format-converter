@@ -9,12 +9,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewController">
+<Pane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
    <children>
-      <Button fx:id="btnConvert" layoutX="150.0" layoutY="521.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Convert" />
+      <Button fx:id="btnConvert" layoutX="150.0" layoutY="521.0" mnemonicParsing="false" onAction="#onBtnConvertClick" prefHeight="30.0" prefWidth="100.0" text="Convert" />
       <ProgressBar fx:id="progressBarMain" layoutX="50.0" layoutY="483.0" prefWidth="300.0" progress="0.0" />
-      <ComboBox fx:id="dropdownFileType" layoutX="115.0" layoutY="244.0" prefWidth="170.0" />
-      <ComboBox fx:id="dropdownFinalFileFormat" layoutX="115.0" layoutY="308.0" prefWidth="170.0" />
+      <ComboBox fx:id="comboBoxFileType" layoutX="115.0" layoutY="244.0" prefWidth="170.0" />
+      <ComboBox fx:id="comboBoxFinalFileFormat" layoutX="115.0" layoutY="308.0" prefWidth="170.0" />
       <Label layoutX="128.0" layoutY="284.0" text="Choose the final file format" />
       <Label layoutX="147.0" layoutY="227.0" text="Choose the file type" />
       <Label layoutX="85.0" layoutY="14.0" text="File format converter">
@@ -23,10 +23,10 @@
          </font>
       </Label>
       <TextField fx:id="fieldDirectory" layoutX="50.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="260.0" />
-      <Button fx:id="btnChooseDirectory" contentDisplay="CENTER" layoutX="320.0" layoutY="434.0" maxHeight="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="/" />
+      <Button fx:id="btnChooseDirectory" contentDisplay="CENTER" layoutX="320.0" layoutY="434.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onBtnChooseDirectoryClick" prefHeight="30.0" prefWidth="30.0" text="/" />
       <Label layoutX="50.0" layoutY="417.0" text="Select the directory to save the file" />
       <TextField fx:id="fieldArchDirectory" layoutX="50.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="260.0" />
-      <Button fx:id="btnChooseFile" contentDisplay="CENTER" layoutX="320.0" layoutY="93.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onBtnChooseFile" prefHeight="30.0" prefWidth="30.0" text="/" />
+      <Button fx:id="btnChooseFile" contentDisplay="CENTER" layoutX="320.0" layoutY="93.0" maxHeight="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="/" />
       <Label layoutX="50.0" layoutY="76.0" text="Select the archive to convert" />
       <TextField fx:id="fieldFileName" disable="true" editable="false" layoutX="50.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="130.0" />
       <TextField fx:id="fieldFileFormat" disable="true" editable="false" layoutX="220.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="130.0" />
