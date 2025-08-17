@@ -23,10 +23,10 @@ public class MainViewController implements Initializable {
 	private ProgressBar progressBarMain;
 	
 	@FXML
-	private ComboBox comboBoxFileType;
+	private ComboBox<?> comboBoxFileType;
 	
 	@FXML
-	private ComboBox comboBoxFinalFileFormat;
+	private ComboBox<?> comboBoxFinalFileFormat;
 	
 	@FXML
 	private TextField fieldDirectory;
@@ -46,17 +46,21 @@ public class MainViewController implements Initializable {
 	@FXML
 	private TextField fieldFileFormat;
 	
+	// ##### objects initialize #####
+	
+	private final FileConverterController fileConverter = new FileConverterController();
+	
 	// ##### function calls #####
 	
 	@FXML
 	public void onBtnConvertClick() {
-		System.out.println("Convert clicked");
 		Alerts.showAlert("Clicked", null, "Button convert has been clicked", AlertType.CONFIRMATION);
 	}
 	
 	@FXML
-	public void onBtnChooseDirectoryClick() {
-		System.out.println("Choose directory clicked");
+	public void onBtnChooseFileClick() {
+		javafx.stage.Window owner = btnChooseFile.getScene().getWindow();
+        fileConverter.selectFile(owner);
 	}
 	
 	@Override

@@ -23,11 +23,11 @@
          </font>
       </Label>
       <TextField fx:id="fieldDirectory" layoutX="50.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="260.0" />
-      <Button fx:id="btnChooseDirectory" contentDisplay="CENTER" layoutX="320.0" layoutY="434.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onBtnChooseDirectoryClick" prefHeight="30.0" prefWidth="30.0" text="/" />
+      <Button fx:id="btnChooseDirectory" contentDisplay="CENTER" layoutX="320.0" layoutY="434.0" maxHeight="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="/" />
       <Label layoutX="50.0" layoutY="417.0" text="Select the directory to save the file" />
       <TextField fx:id="fieldArchDirectory" layoutX="50.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="260.0" />
-      <Button fx:id="btnChooseFile" contentDisplay="CENTER" layoutX="320.0" layoutY="93.0" maxHeight="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="/" />
-      <Label layoutX="50.0" layoutY="76.0" text="Select the archive to convert" />
+      <Button fx:id="btnChooseFile" contentDisplay="CENTER" layoutX="320.0" layoutY="93.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onBtnChooseFileClick" prefHeight="30.0" prefWidth="30.0" text="/" />
+      <Label layoutX="50.0" layoutY="76.0" text="Select the archive directory to convert" />
       <TextField fx:id="fieldFileName" disable="true" editable="false" layoutX="50.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="130.0" />
       <TextField fx:id="fieldFileFormat" disable="true" editable="false" layoutX="220.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="130.0" />
       <Text layoutX="50.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File name" />
