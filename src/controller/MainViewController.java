@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
+import service.FileDataService;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ProgressBar;
@@ -48,7 +49,7 @@ public class MainViewController implements Initializable {
 	
 	// ##### objects initialize #####
 	
-	private final FileConverterController fileConverter = new FileConverterController();
+	private final FileDataService fileConverter = new FileDataService();
 	
 	// ##### function calls #####
 	
@@ -60,7 +61,7 @@ public class MainViewController implements Initializable {
 	@FXML
 	public void onBtnChooseFileClick() {
 		javafx.stage.Window owner = btnChooseFile.getScene().getWindow();
-        fileConverter.selectFile(owner);
+		fileConverter.selectFile(owner);
 	}
 	
 	@Override

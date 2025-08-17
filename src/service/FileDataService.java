@@ -1,11 +1,11 @@
-package controller;
+package service;
 
 import java.io.File;
 
 import javafx.stage.FileChooser;
 
-public class FileConverterController {
-
+public class FileDataService {
+	
 	public void selectFile(javafx.stage.Window owner) {
 		FileChooser fc = new FileChooser();
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Todos", "*.*"));
@@ -27,4 +27,5 @@ public class FileConverterController {
 	        return "Has no extension";
 	    }
 	}
+
 }
